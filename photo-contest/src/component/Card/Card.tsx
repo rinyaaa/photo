@@ -38,6 +38,7 @@ export const Card = () => {
       <div className={style.card}>
         {img.map((item, index) => (
           <div key={index} className={style.cardItem}>
+            <p className={style.number}>{index + 1}</p>
             <img
               src={item.img}
               alt={`Image ${index + 1}`}
