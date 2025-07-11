@@ -1,0 +1,9 @@
+.app{
+    padding: 20px;
+}
+
+.title{
+    font-size: 3rem;
+    color: #333;
+    text-align: center;
+}
