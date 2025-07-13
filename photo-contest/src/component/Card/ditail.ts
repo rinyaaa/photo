@@ -22,6 +22,8 @@ import img21 from "../../assets/Img-21.jpeg";
 import img22 from "../../assets/Img-22.jpeg";
 import img23 from "../../assets/Img-23.jpeg";
 import img24 from "../../assets/Img-24.jpeg";
+import img25 from "../../assets/Img-25.jpeg";
+import img26 from "../../assets/Img-26.jpeg";
 
 export const img = [
   {
@@ -154,5 +156,17 @@ export const img = [
     img: img24,
     title: "ホームレスだいち",
     detail: "寝起きにピザを一枚もらえてホームレスと化した矢部大智",
+  },
+  {
+    img: img25,
+    title: "間違って他店にモバイルオーダーをする矢部",
+    detail:
+      "一社のマックに来たのに藤ヶ丘店のマックに注文をしてしまい萎えてるやべだいち",
+  },
+  {
+    img: img26,
+    title: "あ、八草過ぎちゃった",
+    detail:
+      "登校する時眠過ぎてリニモで爆睡してたら、八草で降りれず奥まで行っちゃた",
   },
 ];
