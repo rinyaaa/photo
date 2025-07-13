@@ -1,44 +1,22 @@
 import style from "./Card.module.css";
-import img1 from "../../assets/Img-1.jpeg";
-import img2 from "../../assets/Img-2.jpeg";
+import { img } from "./ditail";
 
-const img = [
-  {
-    img: img1,
-    title: "ねこ",
-    detail: "ねこ",
-    day: "6/20",
-  },
-  {
-    img: img2,
-    title: "施しを受ける者",
-    detail:
-      "あまりにも哀愁漂う矢部大智の姿を見て撮影しました。その姿はまるで数週間何も食べずに街をさまよい歩きやっとありついた飯に喰らいつく野良犬のようでした。美しい夕焼けとのコントラストによりさらに悲壮感が溢れています。",
-    day: "シス研のBBQ",
-  },
-  {
-    img: img2,
-    title: "施しを受ける者",
-    detail:
-      "あまりにも哀愁漂う矢部大智の姿を見て撮影しました。その姿はまるで数週間何も食べずに街をさまよい歩きやっとありついた飯に喰らいつく野良犬のようでした。美しい夕焼けとのコントラストによりさらに悲壮感が溢れています。",
-    day: "シス研のBBQ",
-  },
-  {
-    img: img2,
-    title: "施しを受ける者",
-    detail:
-      "あまりにも哀愁漂う矢部大智の姿を見て撮影しました。その姿はまるで数週間何も食べずに街をさまよい歩きやっとありついた飯に喰らいつく野良犬のようでした。美しい夕焼けとのコントラストによりさらに悲壮感が溢れています。",
-    day: "シス研のBBQ",
-  },
-];
+const handleShowPhoto = () => {
+  // This function can be used to handle photo click events
+  // For example, you can open a modal or navigate to a detailed view
+  console.log("Photo clicked");
+};
 
 export const Card = () => {
   return (
     <>
       <div className={style.card}>
         {img.map((item, index) => (
-          <div key={index} className={style.cardItem}>
-            <p className={style.number}>{index + 1}</p>
+          <div key={index} className={style.cardItem} onClick={handleShowPhoto}>
+            <div className={style.cardTitle}>
+              <p className={style.number}>{index + 1}</p>
+              <p className={style.title}>{item.title}</p>
+            </div>
             <img
               src={item.img}
               alt={`Image ${index + 1}`}
