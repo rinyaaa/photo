@@ -47,10 +47,7 @@ export const Card = () => {
 
       {isModalOpen && (
         <div className={style.modal} onClick={handleCloseModal} tabIndex={0}>
-          <div
-            className={style.modalContent}
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className={style.modalContent}>
             <button className={style.closeButton} onClick={handleCloseModal}>
               ×
             </button>
