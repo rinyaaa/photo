@@ -23,6 +23,16 @@ export const Card = () => {
     setCurrentImageIndex((prev) => (prev === img.length - 1 ? 0 : prev + 1));
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Escape") {
+      handleCloseModal();
+    } else if (e.key === "ArrowLeft") {
+      handlePreviousImage();
+    } else if (e.key === "ArrowRight") {
+      handleNextImage();
+    }
+  };
+
   return (
     <>
       <div className={style.card}>
@@ -46,8 +56,16 @@ export const Card = () => {
       </div>
 
       {isModalOpen && (
-        <div className={style.modal} onClick={handleCloseModal} tabIndex={0}>
-          <div className={style.modalContent}>
+        <div
+          className={style.modal}
+          onClick={handleCloseModal}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+        >
+          <div
+            className={style.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
             <button className={style.closeButton} onClick={handleCloseModal}>
               ×
             </button>
